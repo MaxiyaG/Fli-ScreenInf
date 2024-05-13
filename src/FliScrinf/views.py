@@ -10,13 +10,13 @@ def index(request):
         flights = [
             {"flight_number": "AF123", "destination": "Paris", "status": "On time"},
             {"flight_number": "BA456", "destination": "London", "status": "Delayed"},
-            # Ajoutez d'autres vols de départ ici
+            
         ]
     else:
         flights = [
             {"flight_number": "AF789", "origin": "Paris", "status": "On time"},
             {"flight_number": "BA654", "origin": "London", "status": "Delayed"},
-            # Ajoutez d'autres vols d'arrivée ici
+           
         ]
 
     return render(request, 'index.html', context={"date": date, "airport": airport, "flights": flights})
